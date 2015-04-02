@@ -7,10 +7,11 @@ import java.util.List;
  * Created by showdown on 3/4/2015 at 1:37 AM.
  * Project swagger-pojo-spec
  */
-public class GenericSwaggerType {
+public class GenericSwaggerSchema {
     String type;
     String format;
-    Items items;
+    //could be a GenericSwaggerType or a reference
+    Object items;
     String collectionFormat = "csv";
     @XmlElement(name = "default")
     Object defaultVaule;
@@ -76,11 +77,11 @@ public class GenericSwaggerType {
         this.format = format;
     }
 
-    public Items getItems() {
+    public Object getItems() {
         return items;
     }
 
-    public void setItems(Items items) {
+    public void setItems(Object items) {
         this.items = items;
     }
 

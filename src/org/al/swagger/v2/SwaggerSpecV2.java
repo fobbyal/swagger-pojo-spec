@@ -2,7 +2,6 @@ package org.al.swagger.v2;
 
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
 
-import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 

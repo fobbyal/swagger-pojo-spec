@@ -10,7 +10,7 @@ import java.util.List;
 public class NonBodyParameter extends Parameter {
     String type;
     String format;
-    Items items;
+    Object Object;
     String collectionFormat = "csv";
     @XmlElement(name = "default")
     Object defaultVaule;
@@ -21,9 +21,9 @@ public class NonBodyParameter extends Parameter {
     java.lang.Integer maxLength;
     Integer minLength;
     String pattern;
-    Integer maxItems;
-    Integer minItems;
-    Boolean uniqueItems;
+    Integer maxObject;
+    Integer minObject;
+    Boolean uniqueObject;
     @XmlElement(name = "enum")
     List enumeration;
     Double multipleOf;
@@ -76,12 +76,12 @@ public class NonBodyParameter extends Parameter {
         this.format = format;
     }
 
-    public Items getItems() {
-        return items;
+    public Object getObject() {
+        return Object;
     }
 
-    public void setItems(Items items) {
-        this.items = items;
+    public void setObject(Object Object) {
+        this.Object = Object;
     }
 
     public Double getMaxinum() {
@@ -92,12 +92,12 @@ public class NonBodyParameter extends Parameter {
         this.maxinum = maxinum;
     }
 
-    public Integer getMaxItems() {
-        return maxItems;
+    public Integer getMaxObject() {
+        return maxObject;
     }
 
-    public void setMaxItems(Integer maxItems) {
-        this.maxItems = maxItems;
+    public void setMaxObject(Integer maxObject) {
+        this.maxObject = maxObject;
     }
 
     public Integer getMaxLength() {
@@ -116,12 +116,12 @@ public class NonBodyParameter extends Parameter {
         this.minimum = minimum;
     }
 
-    public Integer getMinItems() {
-        return minItems;
+    public Integer getMinObject() {
+        return minObject;
     }
 
-    public void setMinItems(Integer minItems) {
-        this.minItems = minItems;
+    public void setMinObject(Integer minObject) {
+        this.minObject = minObject;
     }
 
     public Integer getMinLength() {

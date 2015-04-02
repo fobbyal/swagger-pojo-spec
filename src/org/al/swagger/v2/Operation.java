@@ -16,7 +16,7 @@ public class Operation {
     String operationalID;
     List<String> consumes;
     List<String> produces;
-    List parameters;
+    List<Parameter> parameters;
     Map<String, Response> responses;
     List<String> schemes;
     Boolean deprecated = false;
@@ -66,7 +66,7 @@ public class Operation {
         return parameters;
     }
 
-    public void setParameters(List parameters) {
+    public void setParameters(List<Parameter> parameters) {
         this.parameters = parameters;
     }
 
