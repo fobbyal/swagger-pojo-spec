@@ -1,5 +1,7 @@
 package org.al.swagger.v2;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.List;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ import java.util.Map;
  * Created by showdown on 3/3/2015 at 9:39 PM.
  * Project Pojo Swagger Spec
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Operation {
     List<String> tags;
     String summary;

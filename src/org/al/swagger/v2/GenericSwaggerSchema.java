@@ -1,5 +1,7 @@
 package org.al.swagger.v2;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -7,12 +9,13 @@ import java.util.List;
  * Created by showdown on 3/4/2015 at 1:37 AM.
  * Project swagger-pojo-spec
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GenericSwaggerSchema {
     String type;
     String format;
     //could be a GenericSwaggerType or a reference
     Object items;
-    String collectionFormat = "csv";
+    String collectionFormat;
     @XmlElement(name = "default")
     Object defaultVaule;
     Double maxinum;

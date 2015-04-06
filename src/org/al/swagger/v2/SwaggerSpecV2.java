@@ -1,7 +1,5 @@
 package org.al.swagger.v2;
 
-import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
-
 import java.util.List;
 import java.util.Map;
 
@@ -13,12 +11,13 @@ public class SwaggerSpecV2 {
     String swagger = "2.0";
     Info info;
     String host;
-    String basepath;
     List<String> schemes;
+    String basePath;
+    
     List<String> consumes;
     List<String> produces;
     Map<String, Path> paths;
-    Map<String, JsonSchema> definitions;
+    Map<String, Object> definitions;
     Map<String, Parameter> parameters;
     Map<String, Response> responses;
     Map<String, SecurityScheme> securityDefinitions;
@@ -26,12 +25,12 @@ public class SwaggerSpecV2 {
     List<Tag> tags;
     ExternalDocumentation externalDocs;
 
-    public String getBasepath() {
-        return basepath;
+    public String getBasePath() {
+        return basePath;
     }
 
-    public void setBasepath(String basepath) {
-        this.basepath = basepath;
+    public void setBasePath(String basePath) {
+        this.basePath = basePath;
     }
 
     public List<String> getConsumes() {
@@ -42,11 +41,11 @@ public class SwaggerSpecV2 {
         this.consumes = consumes;
     }
 
-    public Map<String, JsonSchema> getDefinitions() {
+    public Map<String, Object> getDefinitions() {
         return definitions;
     }
 
-    public void setDefinitions(Map<String, JsonSchema> definitions) {
+    public void setDefinitions(Map<String, Object> definitions) {
         this.definitions = definitions;
     }
 
